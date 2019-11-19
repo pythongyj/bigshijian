@@ -1,9 +1,6 @@
-
 $("#login").click(function () {
     var text = $('[type=text]').val();
     var password = $('[type=password]').val();
-    console.log(text);
-
     if (text == '' || password == '') {
         $('#msgInfo').text('账号或密码不能为空')
         $('#myModal').modal('show')
@@ -20,7 +17,6 @@ $("#login").click(function () {
                 $('#msgInfo').text(res.msg)
                 $('#myModal').modal('show')
             }
-
         }
     );
 });
