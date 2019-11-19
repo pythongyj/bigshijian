@@ -4,6 +4,11 @@ $("#login").click(function () {
     var password = $('[type=password]').val();
     console.log(text);
 
+    if (text == '' || password == '') {
+        $('#msgInfo').text('账号或密码不能为空')
+        $('#myModal').modal('show')
+        return;
+    }
     $.post(`${baseURL}admin/login`, {
             user_name: text,
             password: password
@@ -14,8 +19,6 @@ $("#login").click(function () {
             } else {
                 $('#msgInfo').text(res.msg)
                 $('#myModal').modal('show')
-                // alert(res.msg)
-
             }
 
         }
