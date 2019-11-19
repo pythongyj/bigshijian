@@ -7,5 +7,12 @@ $("#login").click(function () {
         return;
     }
     // 用户登录功能
-    user.login( text,password);
+    user.login(text, password, function (res) {
+        if (res.code === 200) {
+            location.href = './index.html';
+        } else {
+            $('#msgInfo').text(res.msg)
+            $('#myModal').modal('show')
+        }
+    });
 });
