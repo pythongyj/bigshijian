@@ -1,4 +1,4 @@
-var baseURL = "http://localhost:8000/";
+
 $("#login").click(function () {
     var text = $('[type=text]').val();
     var password = $('[type=password]').val();
