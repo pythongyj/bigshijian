@@ -6,17 +6,6 @@ $("#login").click(function () {
         $('#myModal').modal('show')
         return;
     }
-    $.post(`${baseURL}admin/login`, {
-            user_name: text,
-            password: password
-        },
-        function (res) {
-            if (res.code === 200) {
-                location.href = './index.html';
-            } else {
-                $('#msgInfo').text(res.msg)
-                $('#myModal').modal('show')
-            }
-        }
-    );
+    // 用户登录功能
+    user.login( text,password);
 });
