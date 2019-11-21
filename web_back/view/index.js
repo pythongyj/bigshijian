@@ -14,3 +14,4 @@ idxInfo.getInfo(function (res) {
         'font-style': 'normal'
     }).text(res.data.nickname)
 });
+
