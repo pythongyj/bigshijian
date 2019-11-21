@@ -1,3 +1,4 @@
+// 点击登录按钮   用户登录
 $("#login").click(function () {
     var text = $('[type=text]').val();
     var password = $('[type=password]').val();
